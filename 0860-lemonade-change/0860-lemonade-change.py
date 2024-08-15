@@ -18,5 +18,4 @@ class Solution:
                     return False
                 change[5] -= 1
                 change[10] -= 1
-            print(change)
         return True
