@@ -24,7 +24,7 @@ class Solution:
         gcd_num = abs(self._gcd(res, cm))
         return f'{int(res/gcd_num)}/{int(cm/gcd_num)}'
     
-    def _gcd(self, a, b):
+    def _gcd(self, a:int, b:int):
         if a == 0:
             return b
         return self._gcd(b % a, a)
