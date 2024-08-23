@@ -18,17 +18,19 @@ class Solution:
                 break
             right += 1
         
-        def CM(nums_list):
-            res = 1
-            for number in nums_list:
-                res *= int(number)
-            return res
-        
-        cm = CM(den)
-        
+        cm = self._CM(den)
         for i in range(len(num)):
             res += int(int(num[i])*(cm/int(den[i])))
-        import math
-        gcd_num = gcd(res, cm)
+        gcd_num = abs(self._gcd(res, cm))
         return f'{int(res/gcd_num)}/{int(cm/gcd_num)}'
-        
+    
+    def _gcd(self, a, b):
+        if a == 0:
+            return b
+        return self._gcd(b % a, a)
+
+    def _CM(self, nums_list: list):
+        res = 1
+        for number in nums_list:
+            res *= int(number)
+        return res
