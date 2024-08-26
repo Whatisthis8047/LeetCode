@@ -13,6 +13,8 @@ class Solution:
             res.append(child.val)
             
     def postorder(self, root: 'Node') -> List[int]:
+        if not root:
+            return []
         res = []
         self._traverse(root, res)
         res.append(root.val)
