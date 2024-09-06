@@ -10,7 +10,7 @@ class Solution:
 
         res = ListNode()
         temp = res
-        while head.next:
+        while head:
             if head.val == val:
                 head = head.next
                 continue
