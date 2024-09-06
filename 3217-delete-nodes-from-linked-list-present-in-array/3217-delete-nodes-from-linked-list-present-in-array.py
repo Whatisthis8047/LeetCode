@@ -18,7 +18,7 @@ class Solution:
                     temp = res
 
                 else:
-                    temp.next = head
+                    temp.next = ListNode(head.val)
                     temp = temp.next
                     
 
