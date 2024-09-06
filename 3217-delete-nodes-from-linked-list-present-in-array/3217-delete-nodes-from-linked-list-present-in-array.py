@@ -25,12 +25,3 @@ class Solution:
                 head = head.next
 
         return res
-
-        # 초기화 res = ListNode(0, None)
-        # 
-
-        # res.next = ListNode(0, None)
-        # [res.next].next = ListNode(0, None)
-        # [res.next].next.next = ListNode(0, None)
-        # ...
-        
