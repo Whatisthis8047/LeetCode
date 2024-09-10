@@ -6,16 +6,12 @@
 class Solution:
     def insertGreatestCommonDivisors(self, head: Optional[ListNode]) -> Optional[ListNode]:
         def GCD(num1, num2):
-            if num1 == num2:
-                return num1
-            elif num1 > num2:
-                for factor in range(num2, 0, -1):
-                    if num1 % factor == 0 and num2 % factor == 0:
-                        return factor
-            elif num1 < num2:
-                for factor in range(num1, 0, -1):
-                    if num1 % factor == 0 and num2 % factor == 0:
-                        return factor
+            if num1 < num2:
+                num1, num2 = num2, num1
+            while num2 != 0:
+                num1, num2 = num2, num1%num2
+            return num1
+        
         cur = head
         nxt = head.next
         while nxt:
