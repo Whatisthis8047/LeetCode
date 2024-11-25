@@ -1,7 +1,7 @@
 class Solution:
     def maxMatrixSum(self, matrix: List[List[int]]) -> int:
         neg_num = 0
-        min_abs = float('inf')  # Initialize to infinity
+        min_abs = float('inf')
         abs_sum = 0
 
         for row in range(len(matrix)):
