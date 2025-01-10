@@ -2,7 +2,7 @@ class Solution:
     def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
         counters = [Counter(w) for w in words2]
         max_counter = Counter()
-        print(counters)
+
         for c in counters:
             for key, val in c.items():
                 max_counter[key] = max(max_counter[key], val)
