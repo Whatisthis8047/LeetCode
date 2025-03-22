@@ -8,7 +8,7 @@ class Solution:
             found_recipe = False
             
             for recipe, ingredient_list in list(reci_dict.items()):
-                if all(ing in supplies for ing in ingredient_list):
+                if set(ingredient_list) <= set(supplies):
                     result.append(recipe)
                     supplies.add(recipe) 
                     del reci_dict[recipe]  
